@@ -128,3 +128,13 @@ export function get_meaningless_words_map(): Map<string, number> {
   }
   return meaningless_word_map;
 }
+
+export function split_paragraphs(content: string): string[] {
+  const raw_paras = content.split('\n'); // 获得纯段落
+  const paras = []; // 返回的段落
+  for (let i = 0; i < raw_paras.length; i++) {
+    const para_i = raw_paras[i].trim();
+    if (para_i.length > 3) paras.push(para_i);
+  }
+  return paras;
+}
