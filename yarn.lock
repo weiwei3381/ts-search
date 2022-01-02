@@ -1021,15 +1021,63 @@
     "@nodelib/fs.scandir" "2.1.3"
     "fastq" "^1.6.0"
 
+"@types/abstract-leveldown@*":
+  "integrity" "sha1-7oGRf+OPdw4p7sgTm28W7kqLCl8="
+  "resolved" "https://registry.npmmirror.com/@types/abstract-leveldown/download/@types/abstract-leveldown-5.0.2.tgz"
+  "version" "5.0.2"
+
 "@types/color-name@^1.1.1":
   "integrity" "sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ== sha1-HBJhu+qhCoBVu8XYq4S3sq/IRqA="
   "resolved" "https://registry.npmmirror.com/@types/color-name/download/@types/color-name-1.1.1.tgz"
   "version" "1.1.1"
 
+"@types/cuid@^2.0.1":
+  "integrity" "sha1-trM7upVfAS9TpFAG9yhsTERW8PE="
+  "resolved" "https://registry.npmmirror.com/@types/cuid/download/@types/cuid-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "cuid" "*"
+
+"@types/encoding-down@*":
+  "integrity" "sha1-C1uQuTrDqnUUjxlQgETnvTZGNVc="
+  "resolved" "https://registry.npmmirror.com/@types/encoding-down/download/@types/encoding-down-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/level-codec" "*"
+
 "@types/json-schema@^7.0.9":
   "integrity" "sha512-qcUXuemtEu+E5wZSJHNxUXeCZhAfXKQ41D+duX+VYPde7xyEVZci+/oXKJL13tnRs9lR2pr4fod59GT6/X1/yQ== sha1-l+3JA36gw4WFMgsolk3eOznkZg0="
   "resolved" "https://registry.npmmirror.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz?cache=0&sync_timestamp=1637266630923&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fjson-schema%2Fdownload%2F%40types%2Fjson-schema-7.0.9.tgz"
   "version" "7.0.9"
+
+"@types/level-codec@*":
+  "integrity" "sha1-sTXgs9qBGFtvJ2VTNMXx2omysK8="
+  "resolved" "https://registry.npmmirror.com/@types/level-codec/download/@types/level-codec-9.0.1.tgz"
+  "version" "9.0.1"
+
+"@types/level-errors@*":
+  "integrity" "sha1-FcH0kVpe92O1FlGxXpD23Agblqg="
+  "resolved" "https://registry.npmmirror.com/@types/level-errors/download/@types/level-errors-3.0.0.tgz"
+  "version" "3.0.0"
+
+"@types/level@^6.0.0":
+  "integrity" "sha1-C8Cq8RBlmOF3Th3Ftp8NWIhdnTQ="
+  "resolved" "https://registry.npmmirror.com/@types/level/download/@types/level-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/encoding-down" "*"
+    "@types/levelup" "*"
+
+"@types/levelup@*":
+  "integrity" "sha1-TcK3fbB5sc+FVWKtUjIapCQbjvQ="
+  "resolved" "https://registry.npmmirror.com/@types/levelup/download/@types/levelup-4.3.3.tgz"
+  "version" "4.3.3"
+  dependencies:
+    "@types/abstract-leveldown" "*"
+    "@types/level-errors" "*"
+    "@types/node" "*"
 
 "@types/line-reader@^0.0.34":
   "integrity" "sha1-9bczBcVhCuxisQwtd0P4eIRglg0="
@@ -1132,6 +1180,18 @@
   "integrity" "sha1-+PLIh60Qv2f2NPAFtph/7TF5qsg="
   "resolved" "https://registry.nlark.com/abbrev/download/abbrev-1.1.1.tgz"
   "version" "1.1.1"
+
+"abstract-leveldown@^7.2.0":
+  "integrity" "sha1-CNGdTib7W+Qm96VwBIUbOeF5Wi4="
+  "resolved" "https://registry.npmmirror.com/abstract-leveldown/download/abstract-leveldown-7.2.0.tgz"
+  "version" "7.2.0"
+  dependencies:
+    "buffer" "^6.0.3"
+    "catering" "^2.0.0"
+    "is-buffer" "^2.0.5"
+    "level-concat-iterator" "^3.0.0"
+    "level-supports" "^2.0.1"
+    "queue-microtask" "^1.2.3"
 
 "acorn-jsx@^5.3.1":
   "integrity" "sha512-K0Ptm/47OKfQRpNQ2J/oIN/3QYiK6FwW+eJbILhsdxh2WTLdl+30o8aGdTbm5JbffpFFAg/g+zi1E+jvJha5ng== sha1-/IZh4Rt6wVOcR9v+oucrOvNNJns="
@@ -1295,6 +1355,11 @@
   "resolved" "https://registry.npmmirror.com/balanced-match/download/balanced-match-1.0.0.tgz"
   "version" "1.0.0"
 
+"base64-js@^1.3.1":
+  "integrity" "sha1-GxtEAWClv3rUC2UPCVljSBkDkwo="
+  "resolved" "https://registry.npmmirror.com/base64-js/download/base64-js-1.5.1.tgz"
+  "version" "1.5.1"
+
 "binary-extensions@^2.0.0":
   "integrity" "sha512-1Yj8h9Q+QDF5FzhMs/c9+6UntbD5MkRfRwac8DoEm9ZfUBZ7tZ55YcGVAzEe4bXsdQHEk+s9S5wsOKVdZrw0tQ== sha1-MPpAyef+B9vIlWeM0ocCTeokHdk="
   "resolved" "https://registry.npmmirror.com/binary-extensions/download/binary-extensions-2.1.0.tgz"
@@ -1331,6 +1396,14 @@
   "resolved" "https://registry.npmmirror.com/buffer-from/download/buffer-from-1.1.1.tgz"
   "version" "1.1.1"
 
+"buffer@^6.0.3":
+  "integrity" "sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA=="
+  "resolved" "https://registry.npmmirror.com/buffer/download/buffer-6.0.3.tgz"
+  "version" "6.0.3"
+  dependencies:
+    "base64-js" "^1.3.1"
+    "ieee754" "^1.2.1"
+
 "callsites@^3.0.0":
   "integrity" "sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ== sha1-s2MKvYlDQy9Us/BRkjjjPNffL3M="
   "resolved" "https://registry.npmmirror.com/callsites/download/callsites-3.1.0.tgz"
@@ -1340,6 +1413,13 @@
   "integrity" "sha512-jnT4Tq0Q4ma+6nncYQVe7d73kmDmE9C3OGTx3MvW7lBM/eY1S1DZTMBON7dqV481RhNiS5OxD7k9JQvmDOTirw=="
   "resolved" "https://registry.npmmirror.com/caniuse-lite/download/caniuse-lite-1.0.30001292.tgz"
   "version" "1.0.30001292"
+
+"catering@^2.0.0", "catering@^2.1.0":
+  "integrity" "sha1-E1T16OIxpbgDCTArsjtAYk0yEsU="
+  "resolved" "https://registry.npmmirror.com/catering/download/catering-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "queue-tick" "^1.0.0"
 
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ== sha1-zUJUFnelQzPPVBpJEIwUMrRMlCQ="
@@ -1508,6 +1588,11 @@
     "shebang-command" "^2.0.0"
     "which" "^2.0.1"
 
+"cuid@*", "cuid@^2.1.8":
+  "integrity" "sha1-y7iPlUFx4NV0dgbAE5+2XFEB6sA="
+  "resolved" "https://registry.npmmirror.com/cuid/download/cuid-2.1.8.tgz"
+  "version" "2.1.8"
+
 "debug@^4.1.0", "debug@^4.1.1", "debug@^4.3.2", "debug@^4.3.3", "debug@4":
   "integrity" "sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q=="
   "resolved" "https://registry.npmmirror.com/debug/download/debug-4.3.3.tgz"
@@ -1519,6 +1604,14 @@
   "integrity" "sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ="
   "resolved" "https://registry.npmmirror.com/deep-is/download/deep-is-0.1.3.tgz"
   "version" "0.1.3"
+
+"deferred-leveldown@^7.0.0":
+  "integrity" "sha1-OYAnFf2m7AbQFZqLKL0cfisc8L8="
+  "resolved" "https://registry.npmmirror.com/deferred-leveldown/download/deferred-leveldown-7.0.0.tgz"
+  "version" "7.0.0"
+  dependencies:
+    "abstract-leveldown" "^7.2.0"
+    "inherits" "^2.0.3"
 
 "define-properties@^1.1.2", "define-properties@^1.1.3":
   "integrity" "sha512-3MqfYKj2lLzdMSf8ZIZE/V+Zuy+BgD6f164e8K2w7dgnpKArBDerGYpM46IYYcjnkdPNMjPk9A6VFB8+3SKlXQ== sha1-z4jabL7ib+bbcJT2HYcMvYTO6fE="
@@ -1577,6 +1670,16 @@
   "integrity" "sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg== sha1-hAyIA7DYBH9P8M+WMXazLU7z7XI="
   "resolved" "https://registry.npmmirror.com/emoji-regex/download/emoji-regex-9.2.2.tgz?cache=0&sync_timestamp=1632752198735&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Femoji-regex%2Fdownload%2Femoji-regex-9.2.2.tgz"
   "version" "9.2.2"
+
+"encoding-down@^7.1.0":
+  "integrity" "sha1-jVW1og1Q628O2vcjP2ruD/ViOGo="
+  "resolved" "https://registry.npmmirror.com/encoding-down/download/encoding-down-7.1.0.tgz"
+  "version" "7.1.0"
+  dependencies:
+    "abstract-leveldown" "^7.2.0"
+    "inherits" "^2.0.3"
+    "level-codec" "^10.0.0"
+    "level-errors" "^3.0.0"
 
 "enquirer@^2.3.5", "enquirer@>= 2.3.0 < 3":
   "integrity" "sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg== sha1-Kn/l3WNKHkElqXXsmU/1RW3Dc00="
@@ -2011,6 +2114,11 @@
   "resolved" "https://registry.npmmirror.com/human-signals/download/human-signals-2.1.0.tgz"
   "version" "2.1.0"
 
+"ieee754@^1.2.1":
+  "integrity" "sha1-jrehCmP/8l0VpXsAFYbRd9Gw01I="
+  "resolved" "https://registry.npmmirror.com/ieee754/download/ieee754-1.2.1.tgz"
+  "version" "1.2.1"
+
 "ignore@^4.0.6":
   "integrity" "sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg== sha1-dQ49tYYgh7RzfrrIIH/9HvJ7Jfw="
   "resolved" "https://registry.npmmirror.com/ignore/download/ignore-4.0.6.tgz"
@@ -2047,7 +2155,7 @@
     "once" "^1.3.0"
     "wrappy" "1"
 
-"inherits@^2.0.3", "inherits@2":
+"inherits@^2.0.3", "inherits@^2.0.4", "inherits@2":
   "integrity" "sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ== sha1-D6LGT5MpF8NDOg3tVTY6rjdBa3w="
   "resolved" "https://registry.npmmirror.com/inherits/download/inherits-2.0.4.tgz"
   "version" "2.0.4"
@@ -2058,6 +2166,11 @@
   "version" "2.1.0"
   dependencies:
     "binary-extensions" "^2.0.0"
+
+"is-buffer@^2.0.5":
+  "integrity" "sha1-68JS5ADSL/jXf6CYiIIaJKZYwZE="
+  "resolved" "https://registry.npmmirror.com/is-buffer/download/is-buffer-2.0.5.tgz"
+  "version" "2.0.5"
 
 "is-callable@^1.1.4", "is-callable@^1.1.5":
   "integrity" "sha512-ESKv5sMCJB2jnHTWZ3O5itG+O128Hsus4K4Qh1h2/cgn2vbgnLSVqfV46AeJA9D5EeeLa9w81KUXMtn34zhX+Q== sha1-9+RrWWiQRW23Tn9ul2yzJz0G+qs="
@@ -2183,6 +2296,87 @@
   "resolved" "https://registry.npmmirror.com/kind-of/download/kind-of-6.0.3.tgz"
   "version" "6.0.3"
 
+"level-codec@^10.0.0":
+  "integrity" "sha1-+eiSdwUyxs3Mg1KVRnMHkbDGLBI="
+  "resolved" "https://registry.npmmirror.com/level-codec/download/level-codec-10.0.0.tgz"
+  "version" "10.0.0"
+  dependencies:
+    "buffer" "^6.0.3"
+
+"level-concat-iterator@^3.0.0":
+  "integrity" "sha1-UjWx90S8NIR+1lpQVIqojSLogc8="
+  "resolved" "https://registry.npmmirror.com/level-concat-iterator/download/level-concat-iterator-3.1.0.tgz"
+  "version" "3.1.0"
+  dependencies:
+    "catering" "^2.1.0"
+
+"level-errors@^3.0.0", "level-errors@^3.0.1":
+  "integrity" "sha1-S+1IozEIzYOw45/fm72E6W+7758="
+  "resolved" "https://registry.npmmirror.com/level-errors/download/level-errors-3.0.1.tgz"
+  "version" "3.0.1"
+
+"level-iterator-stream@^5.0.0":
+  "integrity" "sha1-hbNDjhtMVM5aqMDrlzz7YoEX354="
+  "resolved" "https://registry.npmmirror.com/level-iterator-stream/download/level-iterator-stream-5.0.0.tgz"
+  "version" "5.0.0"
+  dependencies:
+    "inherits" "^2.0.4"
+    "readable-stream" "^3.4.0"
+
+"level-js@^6.1.0":
+  "integrity" "sha1-mC7p5YP8qAGqdWicBBmV0OeqtO8="
+  "resolved" "https://registry.npmmirror.com/level-js/download/level-js-6.1.0.tgz"
+  "version" "6.1.0"
+  dependencies:
+    "abstract-leveldown" "^7.2.0"
+    "buffer" "^6.0.3"
+    "inherits" "^2.0.3"
+    "ltgt" "^2.1.2"
+    "run-parallel-limit" "^1.1.0"
+
+"level-packager@^6.0.1":
+  "integrity" "sha1-RrUh5j33+XKFQ/Z5LAqP6WfmeaA="
+  "resolved" "https://registry.npmmirror.com/level-packager/download/level-packager-6.0.1.tgz"
+  "version" "6.0.1"
+  dependencies:
+    "encoding-down" "^7.1.0"
+    "levelup" "^5.1.1"
+
+"level-supports@^2.0.1":
+  "integrity" "sha1-mvkI2FNZfs1ZIpOy+tEkN1vnnF8="
+  "resolved" "https://registry.npmmirror.com/level-supports/download/level-supports-2.1.0.tgz"
+  "version" "2.1.0"
+
+"level@^7.0.1":
+  "integrity" "sha1-BRIXSNlaT/c1WGDVbrXQqjb67yo="
+  "resolved" "https://registry.npmmirror.com/level/download/level-7.0.1.tgz"
+  "version" "7.0.1"
+  dependencies:
+    "level-js" "^6.1.0"
+    "level-packager" "^6.0.1"
+    "leveldown" "^6.1.0"
+
+"leveldown@^6.1.0":
+  "integrity" "sha1-erEpdwb3DGV9GnKzG0AyOqYSue4="
+  "resolved" "https://registry.npmmirror.com/leveldown/download/leveldown-6.1.0.tgz"
+  "version" "6.1.0"
+  dependencies:
+    "abstract-leveldown" "^7.2.0"
+    "napi-macros" "~2.0.0"
+    "node-gyp-build" "^4.3.0"
+
+"levelup@^5.1.1":
+  "integrity" "sha512-0mFCcHcEebOwsQuk00WJwjLI6oCjbBuEYdh/RaRqhjnyVlzqf41T1NnDtCedumZ56qyIh8euLFDqV1KfzTAVhg=="
+  "resolved" "https://registry.npmmirror.com/levelup/download/levelup-5.1.1.tgz"
+  "version" "5.1.1"
+  dependencies:
+    "catering" "^2.0.0"
+    "deferred-leveldown" "^7.0.0"
+    "level-errors" "^3.0.1"
+    "level-iterator-stream" "^5.0.0"
+    "level-supports" "^2.0.1"
+    "queue-microtask" "^1.2.3"
+
 "levn@^0.4.1":
   "integrity" "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ== sha1-rkViwAdHO5MqYgDUAyaN0v/8at4="
   "resolved" "https://registry.npmmirror.com/levn/download/levn-0.4.1.tgz"
@@ -2274,6 +2468,11 @@
   dependencies:
     "yallist" "^4.0.0"
 
+"ltgt@^2.1.2":
+  "integrity" "sha1-81ypHEk/e3PaDgdJUwTxezH4fuU="
+  "resolved" "https://registry.npmmirror.com/ltgt/download/ltgt-2.2.1.tgz"
+  "version" "2.2.1"
+
 "make-dir@^2.0.0", "make-dir@^2.1.0":
   "integrity" "sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA== sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU="
   "resolved" "https://registry.npmmirror.com/make-dir/download/make-dir-2.1.0.tgz?cache=0&sync_timestamp=1632753470904&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fmake-dir%2Fdownload%2Fmake-dir-2.1.0.tgz"
@@ -2354,6 +2553,11 @@
   "resolved" "https://registry.npmmirror.com/ms/download/ms-2.1.2.tgz"
   "version" "2.1.2"
 
+"napi-macros@~2.0.0":
+  "integrity" "sha1-K2uuQh57lutoeqbHenhYZAZwABs="
+  "resolved" "https://registry.npmmirror.com/napi-macros/download/napi-macros-2.0.0.tgz"
+  "version" "2.0.0"
+
 "natural-compare@^1.4.0":
   "integrity" "sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc="
   "resolved" "https://registry.npmmirror.com/natural-compare/download/natural-compare-1.4.0.tgz"
@@ -2378,6 +2582,11 @@
   "version" "2.6.6"
   dependencies:
     "whatwg-url" "^5.0.0"
+
+"node-gyp-build@^4.3.0":
+  "integrity" "sha1-nyVrA+WCYVC+Ocdkv1Hpk5RtcaM="
+  "resolved" "https://registry.npmmirror.com/node-gyp-build/download/node-gyp-build-4.3.0.tgz"
+  "version" "4.3.0"
 
 "node-modules-regexp@^1.0.0":
   "integrity" "sha1-jZ2+KJZKSsVxLpExZCEHxx6Q7EA="
@@ -2604,7 +2813,17 @@
   "resolved" "https://registry.npmmirror.com/punycode/download/punycode-2.1.1.tgz"
   "version" "2.1.1"
 
-"readable-stream@^3.6.0":
+"queue-microtask@^1.2.2", "queue-microtask@^1.2.3":
+  "integrity" "sha1-SSkii7xyTfrEPg77BYyve2z7YkM="
+  "resolved" "https://registry.npmmirror.com/queue-microtask/download/queue-microtask-1.2.3.tgz"
+  "version" "1.2.3"
+
+"queue-tick@^1.0.0":
+  "integrity" "sha1-AREEeTozCa6Gv+3dVOJR3JSjZyU="
+  "resolved" "https://registry.npmmirror.com/queue-tick/download/queue-tick-1.0.0.tgz"
+  "version" "1.0.0"
+
+"readable-stream@^3.4.0", "readable-stream@^3.6.0":
   "integrity" "sha1-M3u9o63AcGvT4CRCaihtS0sskZg="
   "resolved" "https://registry.npm.taobao.org/readable-stream/download/readable-stream-3.6.0.tgz"
   "version" "3.6.0"
@@ -2717,6 +2936,13 @@
   "version" "3.0.2"
   dependencies:
     "glob" "^7.1.3"
+
+"run-parallel-limit@^1.1.0":
+  "integrity" "sha1-voDpNvV2hiOjipYyYta++P8R57o="
+  "resolved" "https://registry.npmmirror.com/run-parallel-limit/download/run-parallel-limit-1.1.0.tgz"
+  "version" "1.1.0"
+  dependencies:
+    "queue-microtask" "^1.2.2"
 
 "run-parallel@^1.1.9":
   "integrity" "sha512-DEqnSRTDw/Tc3FXf49zedI638Z9onwUotBMiUFKmrO2sdFKIbXamXGQ3Axd4qgphxKB4kw/qP1w5kTxnfU1B9Q== sha1-yd06fPn0ssS2JE4XOm7YZuYd1nk="
