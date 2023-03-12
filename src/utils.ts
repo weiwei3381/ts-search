@@ -12,6 +12,25 @@ export interface Segment {
 
 export type ReverseDict = Map<string, Map<number, number[]>>; // 倒排索引, 关键词 -> {对应段落id -> [出现位置1, 出现位置2,...]}
 
+// nodejieba带标签分词内容
+/**
+ * 
+专名类别标签集合如下表，其中词性标签 24 个（小写字母），专名类别标签 4 个（大写字母）。
+
+n	普通名词	f	方位名词	s	处所名词	t	时间
+nr	人名	ns	地名	nt	机构名	nw	作品名
+nz	其他专名	v	普通动词	vd	动副词	vn	名动词
+a	形容词	ad	副形词	an	名形词	d	副词
+m	数量词	q	量词	r	代词	p	介词
+c	连词	u	助词	xc	其他虚词	w	标点符号
+PER	人名	LOC	地名	ORG	机构名	TIME	时间
+ */
+
+export type TagResult = {
+  word: string;
+  tag: string;
+};
+
 /**
  * 对指定句子进行分词
  * @param sentence 句子
@@ -20,6 +39,11 @@ export type ReverseDict = Map<string, Map<number, number[]>>; // 倒排索引, �
 export function split_words(sentence: string): string[] {
   const result: string[] = nodejieba.cut(sentence);
   return result;
+}
+
+export function split_words_with_tag(sentence: string): TagResult[] {
+  const results: TagResult[] = nodejieba.tag(sentence);
+  return results;
 }
 
 /**
@@ -53,7 +77,7 @@ export function map_to_json(map_obj: Map<string | number, unknown>): string {
  * @param json_txt json的文本
  * @returns map对象
  */
-export function json_to_map(json_txt: string): Map<string, any> {
+export function json_to_map(json_txt: string): Map<string | number, any> {
   return JSON.parse(json_txt, reviver);
 }
 
@@ -137,4 +161,14 @@ export function split_paragraphs(content: string): string[] {
     if (para_i.length > 3) paras.push(para_i);
   }
   return paras;
+}
+
+/**
+ * 将相同类型列表进行合并并进行去重
+ * @param list1 列表1
+ * @param list2 列表2
+ * @returns 合并后的列表
+ */
+export function merge_lists<T>(list1: Array<T>, list2: Array<T>): Array<T> {
+  return Array.from(new Set([...list1, ...list2]));
 }

@@ -23,10 +23,10 @@ async function save_map(
   }
 }
 
-async function query_map(key: string): Promise<Map<string, any>> {
+async function query_map(key: string): Promise<Map<string | number, any>> {
   try {
     const map_json: string = await db.get(key);
-    const map_value: Map<string, any> = json_to_map(map_json);
+    const map_value: Map<string | number, any> = json_to_map(map_json);
     return map_value;
   } catch (error) {
     console.log(`query [key = ${key}] error: ${error}`);

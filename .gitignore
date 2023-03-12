@@ -107,4 +107,7 @@ dist
 .vscode-test
 
 # 测试数据
+
+# json数据
 /data/
+/json/
