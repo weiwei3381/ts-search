@@ -176,6 +176,8 @@ function text2tokens(text: string, token2int: Map<string, number>) {
       }
     }
   }
+  console.log(tokens);
+
   return tokens;
 }
 
@@ -227,10 +229,7 @@ async function GPT2Model(
   append_indexes: bigint[],
 ) {
   try {
-    let inputs = [...initInputs];
-    if (append_indexes.length > 0) {
-      inputs = [...initInputs, ...append_indexes];
-    }
+    const inputs = [...initInputs, ...append_indexes];
     const attentionArray: bigint[] = [];
     for (let i = 0; i < inputs.length; i += 1) {
       attentionArray.push(1n);
@@ -247,9 +246,7 @@ async function GPT2Model(
         [1, inputs.length],
       ),
     };
-    console.time('gpt');
     const results = await session.run(feeds);
-    console.timeEnd('gpt');
     const tokenNum: number =
       results.logits.dims[results.logits.dims.length - 1]; // 获得分词数量
     // 获得最后一个维度的数组
@@ -279,7 +276,7 @@ const main = async (text: string) => {
   //   'C:\\Users\\weiwe\\hungging_face\\model\\model.onnx',
   // );
   const session = await ort.InferenceSession.create(
-    'D:\\onnx_model\\fine-tunning\\decoder_model.onnx',
+    'C:\\Users\\bear\\hungging_face\\model\\model.onnx',
   );
   console.timeEnd('loadModel');
 
@@ -289,7 +286,7 @@ const main = async (text: string) => {
   //   'C:\\Users\\weiwe\\.cache\\huggingface\\hub\\models--IDEA-CCNL--Wenzhong2.0-GPT2-110M-BertTokenizer-chinese\\snapshots\\333cdaddc9d53708829ccad1abc7ba70536449ef\\vocab.txt',
   // );
   const { int2token, token2int } = loadTokenizer(
-    'D:\\onnx_model\\fine-tunning\\vocab.txt',
+    'C:\\Users\\bear\\hungging_face\\model\\vocab.txt',
   );
   console.timeEnd('loadTokenizer');
 
@@ -297,15 +294,11 @@ const main = async (text: string) => {
   const appendCharNum = 40; // 续写的词的数量
   const allGenTexts = []; // 生成的所有文本
   for (let tn = 0; tn < genTextNum; tn += 1) {
-    console.time('epoch');
     const initInputs = text2tokens(text, token2int); // 初始输入
     const indexes: bigint[] = []; // 最后输出的output索引
     for (let i = 0; i < appendCharNum; i += 1) {
-      console.time('oneToken');
       // 获得8个概率最大的索引位置
-      console.time('getIndex');
       const indexesOfMax = await GPT2Model(session, initInputs, indexes);
-      console.timeEnd('getIndex');
       // 从8个概率最大的索引位置中随机获得其中1个索引
       const randIndex =
         indexesOfMax[Math.floor(Math.random() * indexesOfMax.length)];
@@ -317,14 +310,12 @@ const main = async (text: string) => {
       if (randchar === '。') {
         break;
       }
-      console.timeEnd('oneToken');
     }
     let genText = text;
     for (const index of indexes) {
       genText += int2token[Number(index)];
     }
     allGenTexts.push(genText);
-    console.timeEnd('epoch');
   }
   for (const t of allGenTexts) {
     console.log(t);

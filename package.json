@@ -63,6 +63,7 @@
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.6.5",
     "sequelize-typescript": "^2.1.1",
+    "simhash-js": "^1.0.0",
     "sqlite3": "^5.0.2",
     "wordsninja": "^1.0.0"
   }
